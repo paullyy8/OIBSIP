@@ -11,6 +11,7 @@ def generate_password():
         characters = string.ascii_letters + string.digits + string.punctuation
         password = "".join(random.choice(characters) for _ in range(length))
         output.config(text=password, font=("Ubuntu", 20), justify='center')
+        copy_button.config(text="Copy", state="normal")  # Enable the copy button after generating a password
     except ValueError:
         output.config(text="Please enter a valid number", font=("Ubuntu", 12), justify='center')
 
@@ -20,6 +21,11 @@ def copy_to_clipboard():
     root.clipboard_append(output.cget("text"))
     root.update()  # Keeps the clipboard active
     copy_button.config(text="Copied!", state="disabled")
+    root.after(2000, reset_copy_button)  # Reset button after 2 seconds
+
+# Function to reset the copy button text
+def reset_copy_button():
+    copy_button.config(text="Copy", state="normal")
 
 # Create a themed tkinter window
 root = ThemedTk(theme="yaru")
