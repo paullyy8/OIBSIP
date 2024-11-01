@@ -1,8 +1,8 @@
 print("Welcome to FitCalc -- BMI Calculator")
 
 #Prompt for user to fetch the weight and height
-weight = float(input("Enter your weight (in kilograms): "))
-height = float(input("Enter your height (in meters): "))
+weight = float(input("Enter your weight in kg : "))
+height = float(input("Enter your height in cm : "))
 
 #formula to calculate the BMI
 BMI = weight / (height / 100) ** 2
