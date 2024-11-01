@@ -28,7 +28,7 @@ def reset_copy_button():
     copy_button.config(text="Copy", state="normal")
 
 # Create a themed tkinter window
-root = ThemedTk(theme="yaru")
+root = ThemedTk(theme="Breeze")
 root.title("PASSKEY")
 root.geometry("300x200")
 
