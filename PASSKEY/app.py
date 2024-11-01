@@ -8,10 +8,15 @@ from ttkthemes import ThemedTk
 def generate_password():
     try:
         length = int(length_entry.get())
+        if length < 1:
+            output.config(text="Length must be positive", font=("Ubuntu", 12), justify='center')
+            return
+            
         characters = string.ascii_letters + string.digits + string.punctuation
         password = "".join(random.choice(characters) for _ in range(length))
         output.config(text=password, font=("Ubuntu", 20), justify='center')
-        copy_button.config(text="Copy", state="normal")  # Enable the copy button after generating a password
+        copy_button.config(text="Copy", state="normal")  # Enable the copy button
+        
     except ValueError:
         output.config(text="Please enter a valid number", font=("Ubuntu", 12), justify='center')
 
@@ -27,10 +32,15 @@ def copy_to_clipboard():
 def reset_copy_button():
     copy_button.config(text="Copy", state="normal")
 
+# Function to clear the output and entry
+def clear_output():
+    length_entry.delete(0, tk.END)  # Clear entry
+    output.config(text="", font=("Ubuntu", 20), justify='center')  # Clear output
+
 # Create a themed tkinter window
 root = ThemedTk(theme="Breeze")
 root.title("PASSKEY")
-root.geometry("300x200")
+root.geometry("300x250")  # Increased height for better layout
 
 # Label for input prompt
 prompt_label = ttk.Label(root, text="Enter the length of the password:")
@@ -42,11 +52,15 @@ length_entry.pack(pady=5)
 
 # Output label for the password
 output = ttk.Label(root, text="", font=("Ubuntu", 20), justify='center')
-output.pack(pady=5)
+output.pack(pady=10)
 
 # Generate button to generate the password
 generate_button = ttk.Button(root, text="Generate", command=generate_password)
 generate_button.pack(pady=5)
+
+# Clear Button
+clear_button = ttk.Button(root, text="Clear", command=clear_output)
+clear_button.pack(pady=5)
 
 # Copy Button
 copy_button = ttk.Button(root, text="Copy", command=copy_to_clipboard)
