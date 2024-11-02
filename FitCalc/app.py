@@ -32,7 +32,7 @@ def clear_fields():
 
 # Create a themed tkinter window
 root = ThemedTk(theme="Breeze")
-root.title("BMI Calculator")
+root.title("FitCalc")
 root.geometry("300x290")  # Set appropriate window size
 
 # Label for weight input
