@@ -1,4 +1,8 @@
-# FitCalc
+
+---
+<div align="center">
+  <h1>FitCalc</h1>
+</div>
 
 FitCalc is a simple yet powerful desktop application designed to help users calculate their Body Mass Index (BMI). Built using Python and Tkinter, FitCalc provides a straightforward interface for inputting weight and height, allowing users to quickly assess their BMI and receive health classifications based on their results.
 
@@ -42,7 +46,7 @@ To get started with FitCalc, follow these steps:
 
 3. **Run the Application**: Execute the Python script to launch FitCalc:
    ```bash
-   python fitcalc.py
+   python app.py
    ```
 
 ## Usage
@@ -56,24 +60,9 @@ To get started with FitCalc, follow these steps:
 
 3. **Clear Fields**:
    - Click the "Clear" button to reset the inputs and results.
+## 3. Ending Note
+Remember, maintaining a healthy lifestyle starts with understanding your body—FitCalc is your first step towards informed fitness decisions!
 
-## Contributing
-
-Contributions are welcome! If you have suggestions for enhancements or new features, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Inspired by various fitness applications.
-- Thanks to the Python community for their invaluable resources.
-
-## Contact
-
-For any inquiries or feedback, please reach out to me at [your-email@example.com].
-
----
-
-Explore FitCalc and take charge of your health journey!
+--- 
+## 
+<h3 align="center">Designed and Developed by <a href="https://bento.me/amit-paul">Amit Paul</a></h3>
