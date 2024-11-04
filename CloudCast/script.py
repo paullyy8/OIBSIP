@@ -9,7 +9,7 @@ api_key = os.getenv('API_KEY')
 user_input = input("Enter city: ")
 
 weather_data = requests.get(
-    f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=imperial&APPID={api_key}")
+    f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=metric&APPID={api_key}")
 
 if weather_data.json()['cod'] == '404':
     print("No City Found")
@@ -18,4 +18,4 @@ else:
     temp = round(weather_data.json()['main']['temp'])
 
     print(f"The weather in {user_input} is: {weather}")
-    print(f"The temperature in {user_input} is: {temp}ºF")
+    print(f"The temperature in {user_input} is: {temp}ºC")
