@@ -30,7 +30,18 @@ else:
     temp = round(weather_info['main']['temp'])
     feels_like = round(weather_info['main']['feels_like'])
     humidity = weather_info['main']['humidity']
+    
+    # Get precipitation data
+    precipitation = weather_info.get('rain', {}).get('1h', 0)  # Rain volume in last hour (if available)
+    precipitation_chance = "Low"  # Default value
+    total_daily_volume = 0  # Placeholder for total daily volume
 
+    # You can adjust precipitation chance based on your own logic or data source
+    if precipitation > 5:
+        precipitation_chance = "High"
+    elif 1 < precipitation <= 5:
+        precipitation_chance = "Medium"
+    
     # Formatted output in table format
     print("\n🌤️ Weather Information 🌤️")
     print("-" * 40)
@@ -40,4 +51,12 @@ else:
     print(f"{'Feels Like:':<20} : {feels_like}ºC")
     print(f"{'Humidity:':<20} : {humidity}%")
     print("-" * 40)
+
+    # Precipitation Details
+    print("\n🌧️ Precipitation Details 🌧️")
+    print("-" * 40)
+    print(f"{'Precipitation Chances:':<20} : {precipitation_chance}")
+    print(f"{'Total Daily Volume:':<20} : {precipitation} mm")  # Display precipitation in mm
+    print("-" * 40)
+
     print("Thank you for using CloudCast! Have a great day! ☀️ \n")
