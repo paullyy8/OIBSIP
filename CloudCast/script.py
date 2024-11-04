@@ -6,16 +6,32 @@ import requests
 load_dotenv()
 api_key = os.getenv('API_KEY')
 
-user_input = input("Enter city: ")
+# Welcome message
+print("\n Welcome to CloudCast 🌥️!")
+print("Get the latest weather information at your fingertips.\n")
 
+# User input
+user_input = input("Please enter the name of the city you'd like to check the weather for: ")
+
+# Change units to 'metric' for Celsius
 weather_data = requests.get(
     f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=metric&APPID={api_key}")
 
+# Process the response
 if weather_data.json()['cod'] == '404':
-    print("No City Found")
+    print("\n🌧️ No city found. Please ensure you entered the correct city name.")
 else:
-    weather = weather_data.json()['weather'][0]['main']
-    temp = round(weather_data.json()['main']['temp'])
+    weather_info = weather_data.json()
+    weather = weather_info['weather'][0]['main']
+    temp = round(weather_info['main']['temp'])
+    feels_like = round(weather_info['main']['feels_like'])
+    humidity = weather_info['main']['humidity']
 
-    print(f"The weather in {user_input} is: {weather}")
-    print(f"The temperature in {user_input} is: {temp}ºC")
+    # Formatted output
+    print("\n🌤️ Weather Information 🌤️")
+    print(f"City: {user_input.capitalize()}")
+    print(f"Weather: {weather}")
+    print(f"Temperature: {temp}ºC")
+    print(f"Feels Like: {feels_like}ºC")
+    print(f"Humidity: {humidity}%\n")
+    print("Thank you for using CloudCast! Have a great day! ☀️ \n")
