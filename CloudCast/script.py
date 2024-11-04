@@ -31,11 +31,13 @@ else:
     feels_like = round(weather_info['main']['feels_like'])
     humidity = weather_info['main']['humidity']
 
-    # Formatted output
+    # Formatted output in table format
     print("\n🌤️ Weather Information 🌤️")
-    print(f"City: {user_input.capitalize()}")
-    print(f"Weather: {weather}")
-    print(f"Temperature: {temp}ºC")
-    print(f"Feels Like: {feels_like}ºC")
-    print(f"Humidity: {humidity}%\n")
+    print("-" * 40)
+    print(f"{'City:':<20} : {user_input.capitalize()}")
+    print(f"{'Weather:':<20} : {weather}")
+    print(f"{'Temperature:':<20} : {temp}ºC")
+    print(f"{'Feels Like:':<20} : {feels_like}ºC")
+    print(f"{'Humidity:':<20} : {humidity}%")
+    print("-" * 40)
     print("Thank you for using CloudCast! Have a great day! ☀️ \n")
