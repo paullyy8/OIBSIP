@@ -1,5 +1,5 @@
 import random
-import string 
+import string
 import tkinter as tk
 from tkinter import ttk
 from ttkthemes import ThemedTk
@@ -58,13 +58,13 @@ output.pack(pady=10)
 generate_button = ttk.Button(root, text="Generate", command=generate_password)
 generate_button.pack(pady=5)
 
-# Clear Button
-clear_button = ttk.Button(root, text="Clear", command=clear_output)
-clear_button.pack(pady=5)
-
 # Copy Button
 copy_button = ttk.Button(root, text="Copy", command=copy_to_clipboard)
 copy_button.pack(pady=5)
+
+# Clear Button
+clear_button = ttk.Button(root, text="Clear", command=clear_output)
+clear_button.pack(pady=5)
 
 # Run the application
 root.mainloop()
