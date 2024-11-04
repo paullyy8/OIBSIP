@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 import requests
+from datetime import datetime
 
 # Load environment variables from .env file
 load_dotenv()
@@ -26,15 +27,28 @@ if weather_data.json()['cod'] == '404':
     print("\n🌧️ No city found. Please ensure you entered the correct city name.")
 else:
     weather_info = weather_data.json()
-    weather = weather_info['weather'][0]['main']
+    weather = weather_info['weather'][0]['main']  # Main weather condition
+    description = weather_info['weather'][0]['description']  # Weather description
+    sky_condition = weather_info['weather'][0]['description']  # Sky condition
     temp = round(weather_info['main']['temp'])
     feels_like = round(weather_info['main']['feels_like'])
     humidity = weather_info['main']['humidity']
-    visibility = weather_info['visibility'] / 1000  # Convert from meters to kilometers    
+    visibility = weather_info['visibility'] / 1000  # Convert from meters to kilometers
+
+    # Wind information
+    wind_speed = round(weather_info['wind']['speed'])  # Wind speed in m/s
+    wind_direction = weather_info['wind']['deg']  # Wind direction in degrees
+    sunrise = weather_info['sys']['sunrise']  # Sunrise timestamp
+    sunset = weather_info['sys']['sunset']  # Sunset timestamp
+
+    # Convert timestamps to a readable format
+    sunrise_time = datetime.fromtimestamp(sunrise).strftime('%H:%M')
+    sunset_time = datetime.fromtimestamp(sunset).strftime('%H:%M')
 
     # Get precipitation data
     precipitation = weather_info.get('rain', {}).get('1h', 0)  # Rain volume in last hour (if available)
     precipitation_chance = "Low"  # Default value
+    chance_percent = 0  # Initialize chance percentage
 
     # Hypothetical precipitation chance logic
     if precipitation > 5:
@@ -51,23 +65,33 @@ else:
     print("\n🌤️ Weather Information 🌤️")
     print("-" * 40)
     print(f"{'City':<20} : {user_input.capitalize()}")
-    print(f"{'Weather':<20} : {weather}")
+    print(f"{'Weather':<20} : {weather}")  # Show only the main weather condition
+    print(f"{'Sky Condition':<20} : {sky_condition.capitalize()}")
     print(f"{'Temperature':<20} : {temp}ºC")
     print(f"{'Feels Like':<20} : {feels_like}ºC")
+    print(f"{'Sunrise':<20} : {sunrise_time}")
+    print(f"{'Sunset':<20} : {sunset_time}")
     print("-" * 40)
 
     # Precipitation Details
     print("\n🌧️ Precipitation Details 🌧️")
     print("-" * 40)
-    print(f"{'Precipitation Chances':<26} : {precipitation_chance} ({chance_percent}%)")
-    print(f"{'Total Daily Volume':<20} : {precipitation} mm")  # Display precipitation in mm
+    print(f"{'Precipitation Chances':<24} : {precipitation_chance} ({chance_percent}%)")
+    print(f"{'Total Volume (last hour)':<20} : {precipitation} mm")  # Display precipitation in mm
+    print("-" * 40)
+
+    # Wind Information
+    print("\n🌬️ Wind Information 🌬️")
+    print("-" * 40)
+    print(f"{'Wind Speed':<20} : {wind_speed} m/s")
+    print(f"{'Wind Direction':<20} : {wind_direction}°")
     print("-" * 40)
 
     # Other Details
     print("\n📋 Other Details 📋")
     print("-" * 40)
-    print(f"{'Humidity:':<20} : {humidity}%")
-    print(f"{'Visibility:':<20} : {visibility} km")
+    print(f"{'Humidity':<20} : {humidity}%")
+    print(f"{'Visibility':<20} : {visibility} km")
     print("-" * 40)
 
-    print("Thank you for using CloudCast! Have a great day!\n")
+    print("\nThank you for using CloudCast! Have a great day!\n")
