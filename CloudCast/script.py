@@ -36,27 +36,32 @@ else:
     precipitation_chance = "Low"  # Default value
     total_daily_volume = 0  # Placeholder for total daily volume
 
-    # You can adjust precipitation chance based on your own logic or data source
+    # Hypothetical precipitation chance logic
     if precipitation > 5:
         precipitation_chance = "High"
+        chance_percent = 70  # Assume a high chance if there's significant rain
     elif 1 < precipitation <= 5:
         precipitation_chance = "Medium"
-    
+        chance_percent = 40  # Moderate chance for light rain
+    else:
+        precipitation_chance = "Low"
+        chance_percent = 10  # Low chance if no rain is recorded
+
     # Formatted output in table format
     print("\n🌤️ Weather Information 🌤️")
     print("-" * 40)
-    print(f"{'City:':<20} : {user_input.capitalize()}")
-    print(f"{'Weather:':<20} : {weather}")
-    print(f"{'Temperature:':<20} : {temp}ºC")
-    print(f"{'Feels Like:':<20} : {feels_like}ºC")
-    print(f"{'Humidity:':<20} : {humidity}%")
+    print(f"{'City':<20} : {user_input.capitalize()}")
+    print(f"{'Weather':<20} : {weather}")
+    print(f"{'Temperature':<20} : {temp}ºC")
+    print(f"{'Feels Like':<20} : {feels_like}ºC")
+    print(f"{'Humidity':<20} : {humidity}%")
     print("-" * 40)
 
     # Precipitation Details
     print("\n🌧️ Precipitation Details 🌧️")
     print("-" * 40)
-    print(f"{'Precipitation Chances:':<20} : {precipitation_chance}")
-    print(f"{'Total Daily Volume:':<20} : {precipitation} mm")  # Display precipitation in mm
+    print(f"{'Precipitation Chances':<26} : {precipitation_chance} ({chance_percent}%)")
+    print(f"{'Total Daily Volume measure':<20} : {precipitation} mm")  # Display precipitation in mm
     print("-" * 40)
 
     print("Thank you for using CloudCast! Have a great day! ☀️ \n")
