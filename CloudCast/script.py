@@ -11,7 +11,7 @@ if not api_key:
     api_key = input("🚨 No API key found. Please enter your OpenWeatherMap API key: ")
 
 # Welcome message
-print("Welcome to CloudCast 🌥️!")
+print("\nWelcome to CloudCast 🌥️!")
 print("Get the latest weather information at your fingertips.\n")
 
 # User input
