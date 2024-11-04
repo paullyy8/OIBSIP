@@ -30,11 +30,11 @@ else:
     temp = round(weather_info['main']['temp'])
     feels_like = round(weather_info['main']['feels_like'])
     humidity = weather_info['main']['humidity']
-    
+    visibility = weather_info['visibility'] / 1000  # Convert from meters to kilometers    
+
     # Get precipitation data
     precipitation = weather_info.get('rain', {}).get('1h', 0)  # Rain volume in last hour (if available)
     precipitation_chance = "Low"  # Default value
-    total_daily_volume = 0  # Placeholder for total daily volume
 
     # Hypothetical precipitation chance logic
     if precipitation > 5:
@@ -54,14 +54,20 @@ else:
     print(f"{'Weather':<20} : {weather}")
     print(f"{'Temperature':<20} : {temp}ºC")
     print(f"{'Feels Like':<20} : {feels_like}ºC")
-    print(f"{'Humidity':<20} : {humidity}%")
     print("-" * 40)
 
     # Precipitation Details
     print("\n🌧️ Precipitation Details 🌧️")
     print("-" * 40)
     print(f"{'Precipitation Chances':<26} : {precipitation_chance} ({chance_percent}%)")
-    print(f"{'Total Daily Volume measure':<20} : {precipitation} mm")  # Display precipitation in mm
+    print(f"{'Total Daily Volume':<20} : {precipitation} mm")  # Display precipitation in mm
     print("-" * 40)
 
-    print("Thank you for using CloudCast! Have a great day! ☀️ \n")
+    # Other Details
+    print("\n📋 Other Details 📋")
+    print("-" * 40)
+    print(f"{'Humidity:':<20} : {humidity}%")
+    print(f"{'Visibility:':<20} : {visibility} km")
+    print("-" * 40)
+
+    print("Thank you for using CloudCast! Have a great day!\n")
