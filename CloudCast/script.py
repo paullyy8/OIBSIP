@@ -6,8 +6,12 @@ import requests
 load_dotenv()
 api_key = os.getenv('API_KEY')
 
+# Check if the API key is available and prompt the user if it's not
+if not api_key:
+    api_key = input("🚨 No API key found. Please enter your OpenWeatherMap API key: ")
+
 # Welcome message
-print("\n Welcome to CloudCast 🌥️!")
+print("Welcome to CloudCast 🌥️!")
 print("Get the latest weather information at your fingertips.\n")
 
 # User input
