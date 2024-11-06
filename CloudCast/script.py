@@ -13,7 +13,6 @@ if not api_key:
 
 # Welcome message
 print("\nWelcome to CloudCast 🌥️!")
-print("Get the latest weather information at your fingertips.\n")
 
 # User input
 user_input = input("Please enter the name of the city you'd like to check the weather for: ")
