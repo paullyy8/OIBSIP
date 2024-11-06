@@ -27,7 +27,6 @@ if weather_data.json()['cod'] == '404':
 else:
     weather_info = weather_data.json()
     weather = weather_info['weather'][0]['main']  # Main weather condition
-    description = weather_info['weather'][0]['description']  # Weather description
     sky_condition = weather_info['weather'][0]['description']  # Sky condition
     temp = round(weather_info['main']['temp'])
     feels_like = round(weather_info['main']['feels_like'])
@@ -60,37 +59,30 @@ else:
         precipitation_chance = "Low"
         chance_percent = 10  # Low chance if no rain is recorded
 
-    # Formatted output in table format
-    print("\n🌤️ Weather Information 🌤️")
-    print("-" * 40)
-    print(f"{'City':<20} : {user_input.capitalize()}")
-    print(f"{'Weather':<20} : {weather}")  # Show only the main weather condition
-    print(f"{'Sky Condition':<20} : {sky_condition.capitalize()}")
-    print(f"{'Temperature':<20} : {temp}ºC")
-    print(f"{'Feels Like':<20} : {feels_like}ºC")
-    print(f"{'Sunrise':<20} : {sunrise_time}")
-    print(f"{'Sunset':<20} : {sunset_time}")
-    print("-" * 40)
+    # Display everything in a structured table format
+    print("\n" + "=" * 80)
+    print(f"{'Weather Information':^80}")
+    print("=" * 80)
 
-    # Precipitation Details
-    print("\n🌧️ Precipitation Details 🌧️")
-    print("-" * 40)
-    print(f"{'Precipitation Chances':<24} : {precipitation_chance} ({chance_percent}%)")
-    print(f"{'Total Volume (last hour)':<20} : {precipitation} mm")  # Display precipitation in mm
-    print("-" * 40)
+    print(f"{'City':<30} : {user_input.capitalize()}")
+    print(f"{'Weather':<30} : {weather}")
+    print(f"{'Sky Condition':<30} : {sky_condition.capitalize()}")
+    print(f"{'Temperature':<30} : {temp}ºC")
+    print(f"{'Feels Like':<30} : {feels_like}ºC")
+    print(f"{'Sunrise':<30} : {sunrise_time}")
+    print(f"{'Sunset':<30} : {sunset_time}")
+    print("-" * 80)
 
-    # Wind Information
-    print("\n🌬️ Wind Information 🌬️")
-    print("-" * 40)
-    print(f"{'Wind Speed':<20} : {wind_speed} m/s")
-    print(f"{'Wind Direction':<20} : {wind_direction}°")
-    print("-" * 40)
+    print(f"{'Precipitation Chances':<30} : {precipitation_chance} ({chance_percent}%)")
+    print(f"{'Total Volume (last hour)':<30} : {precipitation} mm")
+    print("-" * 80)
 
-    # Other Details
-    print("\n📋 Other Details 📋")
-    print("-" * 40)
-    print(f"{'Humidity':<20} : {humidity}%")
-    print(f"{'Visibility':<20} : {visibility} km")
-    print("-" * 40)
+    print(f"{'Wind Speed':<30} : {wind_speed} m/s")
+    print(f"{'Wind Direction':<30} : {wind_direction}°")
+    print("-" * 80)
+
+    print(f"{'Humidity':<30} : {humidity}%")
+    print(f"{'Visibility':<30} : {visibility} km")
+    print("=" * 80)
 
     print("\nThank you for using CloudCast! Have a great day!\n")
