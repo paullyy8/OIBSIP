@@ -73,16 +73,25 @@ else:
     print(f"{'Sunset':<30} : {sunset_time}")
     print("-" * 80)
 
+    # Precipitation Details Heading
+    print(f"{'Precipitation Details':^80}")
+    print("=" * 80)
     print(f"{'Precipitation Chances':<30} : {precipitation_chance} ({chance_percent}%)")
     print(f"{'Total Volume (last hour)':<30} : {precipitation} mm")
     print("-" * 80)
 
+    # Wind Information Heading
+    print(f"{'Wind Information':^80}")
+    print("=" * 80)
     print(f"{'Wind Speed':<30} : {wind_speed} m/s")
     print(f"{'Wind Direction':<30} : {wind_direction}°")
     print("-" * 80)
 
+    # Other Details Heading
+    print(f"{'Other Details':^80}")
+    print("=" * 80)
     print(f"{'Humidity':<30} : {humidity}%")
     print(f"{'Visibility':<30} : {visibility} km")
-    print("=" * 80)
+    print("_" * 80)
 
     print("\nThank you for using CloudCast! Have a great day!\n")
