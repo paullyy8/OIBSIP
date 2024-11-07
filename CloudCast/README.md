@@ -1,5 +1,3 @@
-
----
 <div align="center">
   <img src="/assets/icons/cloud-cast.ico" width="150px" height="150px">
   <h1>CloudCast</h1>
