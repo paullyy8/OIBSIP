@@ -1,10 +1,11 @@
-# Introduction
+Welcome to my collection of Python projects developed during my internship at [Oasis Infobyte](https://oasisinfobyte.com/).
 
-This repository contains the Python projects I have developed during my internship at [Oasis Infobyte](https://oasisinfobyte.com/). All the projects are built using [Python](https://www.python.org/) and [Tkinter](https://wiki.python.org/moin/TkInter).  
-I’ve designed both CLI (Command Line Interface) and GUI (Graphical User Interface) versions for users, giving them flexibility in how they interact with the tools.
+Each project is available in two versions:
 
-For those who prefer working in the terminal, the CLI versions are lightweight and efficient.  
-For users who prefer a more interactive experience, I've also built GUI applications using Tkinter.
+- **CLI (Command-Line Interface)**: Lightweight and efficient for terminal-based users.
+- **GUI (Graphical User Interface)**: Interactive and user-friendly, designed with Tkinter for a rich visual experience.
+
+I’ve built these projects to help users accomplish specific tasks with ease while offering flexibility in usage. Whether you prefer working in the terminal or a graphical interface, there’s something for everyone.
 
 ## Table of Contents
 
@@ -16,26 +17,29 @@ For users who prefer a more interactive experience, I've also built GUI applicat
 ## Projects
 
 ### 1. **FitCalc: BMI Calculator**
-- **Description**: FitCalc is a simple BMI (Body Mass Index) calculator that can help users calculate their BMI based on height and weight. It’s available in both a **CLI** and a **GUI** version.
-- **Technologies Used**: Python, Tkinter  
-- For more details, check the [FitCalc README](https://github.com/paullyy8/OIBSIP/blob/main/FitCalc/README.md).
-
----
+![FitCalc](/assets/flyers/fitcalc.jpg)
+- **Description**: FitCalc helps you calculate your Body Mass Index (BMI) based on your weight and height. This tool is available in both a **CLI** and a **GUI** version, so you can choose how you want to interact with it.
+- **Technologies Used**: Python, Tkinter, ttkthemes 
+- For more details, check out the [FitCalc README](https://github.com/paullyy8/OIBSIP/blob/main/FitCalc/README.md).
 
 ### 2. **CloudCast: Weather Forecast Report**
-- **Description**: CloudCast is a minimal weather forecast tool that fetches and displays weather information for a given location in the terminal.
-- **Technologies Used**: Python  
-- For more details, check the [CloudCast README](https://github.com/paullyy8/OIBSIP/blob/main/CloudCast/README.md).
+![CloudCast](/assets/flyers/cloudcast.jpg)
+- **Description**: CloudCast is a simple yet effective tool for fetching weather data for any location. It displays a weather forecast report right in the terminal.
+- **Technologies Used**: Python
+- For more details, check out the [CloudCast README](https://github.com/paullyy8/OIBSIP/blob/main/CloudCast/README.md).
 
----
 
 ### 3. **Passkey: Password Generator**
-- **Description**: Passkey is a password generator that allows users to generate strong, random passwords. Available in both a **CLI** and a **GUI** version.
-- **Technologies Used**: Python  
-- For more details, check the [Passkey README](https://github.com/paullyy8/OIBSIP/blob/main/PASSKEY/README.md).
+![PASSKEY](/assets/flyers/Passkey.gif)
 
----
+- **Description**: Passkey is a password generator that lets you create secure, random passwords. This tool is available in both **CLI** and **GUI** versions to suit different preferences.
+- **Technologies Used**: Python, Tkinter, ttkthemes
+- For more details, check out the [Passkey README](https://github.com/paullyy8/OIBSIP/blob/main/PASSKEY/README.md).
 
 ## License
 
-This repository is licensed under the MIT License. See the [LICENSE](https://github.com/paullyy8/OIBSIP/blob/main/LICENSE) file for more details.
+This repository is licensed under the **MIT License**. For more information, please refer to the [LICENSE](https://github.com/paullyy8/OIBSIP/blob/main/LICENSE) file.
+
+--- 
+## 
+<h3 align="center">Designed and Developed by <a href="https://bento.me/amit-paul">Amit Paul</a></h3>
