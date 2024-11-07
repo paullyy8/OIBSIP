@@ -1,10 +1,11 @@
-
----
 <div align="center">
+   <img src="/assets/icons/fit-calc.ico" width="150px" height="150px">
   <h1>FitCalc</h1>
-</div>
 
-FitCalc is a simple yet powerful desktop application designed to help users calculate their Body Mass Index (BMI). Built using Python and Tkinter, FitCalc provides a straightforward interface for inputting weight and height, allowing users to quickly assess their BMI and receive health classifications based on their results.
+</div>
+A simple yet powerful application to calculate your Body Mass Index (BMI) and help you understand your health status.
+
+![CloudCast](/assets/media/FitCalc.jpg)
 
 ## Table of Contents
 
@@ -19,50 +20,74 @@ FitCalc is a simple yet powerful desktop application designed to help users calc
 
 ## Features
 
-- **BMI Calculation**: Calculate your BMI using weight (in kg) and height (in cm).
-- **Health Classification**: Receive feedback on your BMI classification: underweight, healthy, overweight, or obese.
+- **BMI Calculation**: Calculate BMI based on weight (kg) and height (cm).
+- **Health Classification**: Get feedback on whether you're underweight, healthy, overweight, or obese.
 - **Clear Functionality**: Easily reset inputs and results for repeated calculations.
-- **User-Friendly Interface**: Built with a themed Tkinter interface for an engaging user experience.
+- **User-Friendly Interface**: Choose between a Command-Line Interface (CLI) or Graphical User Interface (GUI) for the best experience.
 
 ## Technologies Used
 
 - Python
-- Tkinter
+- Tkinter (for GUI)
 - ttkthemes
 
 ## Getting Started
 
-To get started with FitCalc, follow these steps:
+### 1. Clone the Repository
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/paullyy8/OIBSIP.git
-   ```
+```bash
+git clone https://github.com/paullyy8/OIBSIP.git
+```
 
-2. **Navigate to the Project Directory**:
+### 2. Install Dependencies
+
+Before running the application, you need to install the required dependencies. You can do this by running the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Option 1: **Graphical User Interface (GUI)**
+
+1. **Navigate to the Project Directory**:
    ```bash
    cd FitCalc
    ```
 
-3. **Run the Application**: Execute the Python script to launch FitCalc:
+2. **Run the Application**:
+   - To launch the GUI, run the following command:
+     ```bash
+     python app.py
+     ```
+
+3. **Enter Your Details**:
+   - Input your weight (in kg) and height (in cm).
+   - Click the "Calculate BMI" button to get your BMI and health classification.
+   - Click "Clear" to reset inputs.
+
+
+### Option 2: **Command-Line Interface (CLI)**
+
+1. **Navigate to the Project Directory**:
    ```bash
-   python app.py
+   cd FitCalc
    ```
 
-## Usage
+2. **Run the Script**:
+   - To run the CLI version, execute:
+     ```bash
+     python script.py
+     ```
 
-1. **Enter Your Details**:
-   - Input your weight in kilograms.
-   - Input your height in centimeters.
+3. **Enter Your Details**:
+   - Input your weight and height when prompted to get your BMI and classification.
 
-2. **Calculate Your BMI**:
-   - Click the "Calculate BMI" button to see your BMI and health classification.
 
-3. **Clear Fields**:
-   - Click the "Clear" button to reset the inputs and results.
-## 3. Ending Note
+## Ending Note
 Remember, maintaining a healthy lifestyle starts with understanding your body—FitCalc is your first step towards informed fitness decisions!
 
 --- 
-## 
+
 <h3 align="center">Designed and Developed by <a href="https://bento.me/amit-paul">Amit Paul</a></h3>
