@@ -1,11 +1,14 @@
 
 ---
 <div align="center">
+  <img src="/assets/icons/cloud-cast.ico" width="150px" height="150px">
   <h1>CloudCast</h1>
 </div>
 
 ## About the Project
 CloudCast is a Command Line Based application designed to deliver accurate and up-to-date weather information. 
+
+![CloudCast](/assets/media/CloudCast.jpg)
 
 ## Table of Contents
 1. [Features](#features)
@@ -22,8 +25,6 @@ CloudCast is a Command Line Based application designed to deliver accurate and u
 ## Technologies Used
 - **Python**: Core programming language for the application logic.
 - **Weather API**: To fetch real-time weather data.
-
-Your instructions are a great start, but we can enhance them for clarity and a better user experience. Here’s a revised version that includes more context, step-by-step instructions, and additional tips for first-time users:
 
 ## Getting Started with CloudCast 🌤️
 ### 1. Clone the Repository
@@ -57,7 +58,7 @@ To prevent your API key from being shared, ensure that your `.env` file is inclu
 ### 6. Run the Application
 Now you’re ready to run the CloudCast application! Use the following command:
 ```bash
-python app.py
+python script.py
 ```
 
 ## Usage
