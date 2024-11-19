@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="./assets/media/oasis infobyte logo.png">
+  <h3>Python Developer Internship</h3>
+  <h4>Oct 2024 - Nov 2024</h4>
+</div>
+
 Welcome to my collection of Python projects developed during my internship at [Oasis Infobyte](https://oasisinfobyte.com/).
 
 Each project is available in two versions:
