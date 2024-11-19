@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./assets/media/oasis infobyte logo.png">
-  <h3>Python Developer Internship</h3>
+  <h2>Python Developer Internship</h2>
   <h4>Oct 2024 - Nov 2024</h4>
 </div>
 
